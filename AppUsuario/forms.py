@@ -2,7 +2,7 @@ from django import forms
 from django.contrib.auth.forms import UserChangeForm
 from .models import Usuario
 
-
+# formulario que me permite en el frontend y en el admin agregar un usuario
 class UsuarioCreationForm(forms.ModelForm):
     password1 = forms.CharField(label="Contraseña", widget=forms.PasswordInput)
     password2 = forms.CharField(label="Confirmar contraseña", widget=forms.PasswordInput)
@@ -26,7 +26,7 @@ class UsuarioCreationForm(forms.ModelForm):
             usuario.save()
         return usuario
 
-
+# formulario que me permite en el frontend y en el admin modificar un usuario
 class UsuarioChangeForm(UserChangeForm):
     class Meta:
         model = Usuario
