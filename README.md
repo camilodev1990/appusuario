@@ -40,9 +40,17 @@ INSTALLED_APPS = [
 ]
 
 
+
+
+
 ## urls.py - del proyecto
 
-agregar la ruta de la aplicacion a la url del proyecto
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('usuario/', include('appusuario.AppUsuario.urls')),
+]
 
 
 
