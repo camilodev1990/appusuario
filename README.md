@@ -34,7 +34,7 @@ AUTH_USER_MODEL = "AppUsuario.Usuario"
 
 INSTALLED_APPS = [
     ...
-    'apps_importadas.AppUsuario',
+    'apps_importadas.appusuario.AppUsuario',
     'rest_framework',
     'rest_framework_simplejwt',
 ]
