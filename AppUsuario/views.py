@@ -1,7 +1,7 @@
 # appusuario/AppUsuario/views.py
 
 from django.shortcuts import render
-from django.views.generic import CreateView # vista basada en clase para trabajar por herencia 
+from django.views.generic import CreateView # vista basada en clase para trabajar por herencia **
 from apps_importadas.appusuario.AppUsuario.models import Usuario
 from apps_importadas.appusuario.AppUsuario.forms import UsuarioCreationForm
 from django.urls import reverse_lazy
