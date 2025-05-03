@@ -2,8 +2,8 @@
 
 from django.shortcuts import render
 from django.views.generic import CreateView # vista basada en clase para trabajar por herencia 
-from appusuario.AppUsuario.models import Usuario
-from appusuario.AppUsuario.forms import UsuarioCreationForm
+from apps_importadas.appusuario.AppUsuario.models import Usuario
+from apps_importadas.appusuario.AppUsuario.forms import UsuarioCreationForm
 from django.urls import reverse_lazy
 from django.contrib.auth.views import LoginView, LogoutView
 
