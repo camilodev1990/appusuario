@@ -8,7 +8,6 @@ from .validators import validar_password_segura
 class UsuarioCreationForm(forms.Form):
     email = forms.EmailField(
         required=True,
-        strip=True,
         widget=forms.EmailInput(
             attrs={
                 'autocomplete': 'email',
