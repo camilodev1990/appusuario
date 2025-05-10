@@ -1,26 +1,35 @@
 # appusuario/AppUsuario/views.py
 
 from django.shortcuts import render
-from django.views.generic import CreateView # vista basada en clase para trabajar por herencia **
+from django.views.generic import FormView
 from apps_importadas.appusuario.AppUsuario.models import Usuario
-from apps_importadas.appusuario.AppUsuario.forms import UsuarioCreationForm
+from apps_importadas.appusuario.AppUsuario.forms import UsuarioCreationForm, UsuarioLoginForm
 from django.urls import reverse_lazy
 from django.contrib.auth.views import LoginView, LogoutView
+from django.contrib.auth import get_user_model
 
-# vista para registrar un usuario por medio de un template y formulario UserCreationForm
-class RegistroTemplateView(CreateView):
-    model = Usuario
+User = get_user_model()
+
+
+class RegistroTemplateView(FormView):
     form_class = UsuarioCreationForm
     template_name = "registro.html"
     success_url = reverse_lazy('login')
 
+    def form_valid(self, form):
+        email = form.cleaned_data['email']
+        password = form.cleaned_data['password1']        
+        User.objects.create_user(email=email, password=password)
+        return super().form_valid(form)
+
+
 
 # vista de login por medio de un template 
 class LoginTemplateView(LoginView):
+    form_class = UsuarioLoginForm
     template_name = "login.html"
     success_url = reverse_lazy('home')
-    redirect_authenticated_user = True  
-    # si esta ya autenticado se redirige a LOGIN_REDIRECT_URL configurado en settings
+    redirect_authenticated_user = True
 
 class LogoutTemplateView(LogoutView):
     template_name = 'logout.html'
