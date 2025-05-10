@@ -23,7 +23,7 @@ SI MAS ADELANTE REALIZO ALGUNA MODIFICACION EN EL MODELO USUARIO DEBO ACTUALIZAR
 
 `git pull origin main`  # O la rama que estés utilizando
 
-
+`git stash` # lo debo usar para actualizar el submodulo cuando este haciendo cambios en el proyecto
 
 ## settings - del proyecto
 

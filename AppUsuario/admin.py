@@ -1,11 +1,10 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from .models import Usuario
-from .forms import UsuarioCreationForm, UsuarioChangeForm
+from .forms import UsuarioCreationForm
 
 
 class UsuarioAdmin(BaseUserAdmin):
-    form = UsuarioChangeForm
     add_form = UsuarioCreationForm
 
     list_display = ['email', 'is_active', 'is_staff', 'is_superuser']
