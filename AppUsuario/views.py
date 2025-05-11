@@ -2,7 +2,6 @@
 
 from django.shortcuts import render
 from django.views.generic import FormView
-from apps_importadas.appusuario.AppUsuario.models import Usuario
 from apps_importadas.appusuario.AppUsuario.forms import UsuarioCreationForm, UsuarioLoginForm
 from django.urls import reverse_lazy
 from django.contrib.auth.views import LoginView, LogoutView
