@@ -6,7 +6,6 @@ Aplicación Django desarrollada por **camilodev1990@gmail.com** que permite:
 - Inicio de sesión
 - Cierre de sesión
 - Edición de datos del usuario
-- Recuperación de contraseña
 - Modelo de usuario personalizado con UUID
 
 ---
