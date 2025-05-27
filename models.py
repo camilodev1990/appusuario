@@ -1,9 +1,4 @@
 from django.db import models
-
-# Create your models here.
-#appusuario/AppUsuario/models.py
-
-from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from .managers import UsuarioManager
 import uuid
