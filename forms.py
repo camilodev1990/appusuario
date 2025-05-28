@@ -1,8 +1,8 @@
 # apps_importadas/appusuario/AppUsuario/forms.py
 from django import forms
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, PasswordChangeForm
-from apps_importadas.appusuario.AppUsuario.models import Usuario
-from apps_importadas.appusuario.AppUsuario.validators import validar_password_segura
+from apps_importadas.appusuario.models import Usuario
+from apps_importadas.appusuario.validators import validar_password_segura
 
 
 #----------------------------------------------------------------------------------------------------------
