@@ -1,4 +1,6 @@
-# appusuario/AppUsuario/views.py
+#apps_importadas/appusuario/views.py
+
+
 from django.views.generic.edit import CreateView, UpdateView
 from django.views import View
 from django.urls import reverse_lazy

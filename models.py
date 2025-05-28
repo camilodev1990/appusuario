@@ -1,3 +1,5 @@
+#apps_importadas/appusuario/models.py
+
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from .managers import UsuarioManager
