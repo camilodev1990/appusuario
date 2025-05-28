@@ -1,7 +1,7 @@
-#appusuario/AppUsuario/urls.py
+#apps_importadas/appusuario/urls.py
 
 from django.urls import path
-from apps_importadas.appusuario.AppUsuario import views
+from apps_importadas.appusuario import views
 
 urlpatterns = [
     path('registro/', views.RegistroTemplateView.as_view(), name='registro'),

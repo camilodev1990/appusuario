@@ -1,14 +1,17 @@
-# appusuario/AppUsuario/views.py
+#apps_importadas/appusuario/views.py
+
+
 from django.views.generic.edit import CreateView, UpdateView
 from django.views import View
 from django.urls import reverse_lazy
-from apps_importadas.appusuario.AppUsuario.forms import UsuarioCreationForm, CustomLoginForm, CustomPasswordChangeForm, UsuarioUpdateForm, ConfirmLogoutForm
-from apps_importadas.appusuario.AppUsuario.models import Usuario
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import LoginView, PasswordChangeView, PasswordChangeDoneView
 from django.contrib.auth import get_user_model, logout
 from django.contrib import messages
 from django.shortcuts import redirect, render
+
+from apps_importadas.appusuario.forms import UsuarioCreationForm, CustomLoginForm, CustomPasswordChangeForm, UsuarioUpdateForm, ConfirmLogoutForm
+from apps_importadas.appusuario.models import Usuario
 
 
 usuario = get_user_model()
