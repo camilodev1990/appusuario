@@ -118,7 +118,7 @@ class CustomPasswordChangeForm(PasswordChangeForm):
 class UsuarioUpdateForm(forms.ModelForm):
     class Meta:
         model = Usuario
-        fields = ['email']  # Agrega más campos si tu modelo los tiene, como 'first_name', 'last_name'
+        fields = ['email']  
         widgets = {
             'email': forms.EmailInput(attrs={
                 'class': 'form-control',
@@ -129,6 +129,5 @@ class UsuarioUpdateForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        # Si hay más campos, puedes personalizar sus widgets aquí
         for field in self.fields.values():
             field.widget.attrs['class'] = 'form-control'
