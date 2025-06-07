@@ -20,7 +20,6 @@ class UsuarioAdmin(UserAdmin):
     fieldsets = (
         (_("Información de acceso"), {"fields": ("email", "password")}),
         (_("Permisos"), {"fields": ("is_active", "is_staff", "is_superuser", "groups", "user_permissions")}),
-        (_("Fechas"), {"fields": ("fecha_creacion", "fecha_modificacion")}),
     )
 
     add_fieldsets = (
